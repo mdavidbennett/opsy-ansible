@@ -1,0 +1,19 @@
+namespace: opsy
+name: opsy_ansible
+version: 0.1.0
+
+authors:
+  - M. David Bennett <mdavidbennett@syntheticworks.com>
+
+tags:
+  - opsy
+  - inventory
+
+readme: README.md
+license_file: LICENSE
+description: Dynamic inventory plugin for Opsy.
+
+repository: https://github.com/testeddoughnut/opsy-ansible
+documentation: https://github.com/testeddoughnut/opsy-ansible
+homepage: https://github.com/testeddoughnut/opsy-ansible
+issues: https://github.com/testeddoughnut/opsy-ansible/issues
