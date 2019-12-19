@@ -1,0 +1,49 @@
+[
+  {
+    "id": "ec11b41f-f101-489b-8298-6dd2d23d8a30",
+    "zone_id": "bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+    "parent_id": null,
+    "name": "default",
+    "default_priority": 100,
+    "vars": {
+      "shutup": "meg",
+      "default": true
+    },
+    "compiled_vars": {
+      "datacenter": "west",
+      "prom_node": "westprom",
+      "shutup": "meg",
+      "default": true
+    },
+    "created_at": "2019-12-17T15:53:38.438411+00:00",
+    "updated_at": "2019-12-17T15:53:38.438582+00:00",
+    "_links": {
+      "self": "/api/v1/groups/ec11b41f-f101-489b-8298-6dd2d23d8a30",
+      "collection": "/api/v1/groups/"
+    }
+  },
+  {
+    "id": "ad4640c2-fa54-45d1-b135-677ca1675656",
+    "zone_id": "bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+    "parent_id": "def760e8-fb9a-4a72-bcf9-3a1f2a20382c",
+    "name": "prom_nodes",
+    "default_priority": 100,
+    "vars": {
+      "prom_region": "west",
+      "shutup": "sam"
+    },
+    "compiled_vars": {
+      "datacenter": "west",
+      "prom_node": "westprom",
+      "thanos": true,
+      "prom_region": "west",
+      "shutup": "sam"
+    },
+    "created_at": "2019-12-17T15:53:38.438411+00:00",
+    "updated_at": "2019-12-17T15:53:38.438582+00:00",
+    "_links": {
+      "self": "/api/v1/groups/ad4640c2-fa54-45d1-b135-677ca1675656",
+      "collection": "/api/v1/groups/"
+    }
+  }
+]

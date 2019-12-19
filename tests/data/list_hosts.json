@@ -1,0 +1,99 @@
+[
+  {
+    "id": "185c3f3c-5ae3-4328-aa23-ff598a00acda",
+    "zone_id": "bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+    "name": "westconsul",
+    "vars": null,
+    "compiled_vars": {
+      "datacenter": "west",
+      "prom_node": "westprom",
+      "shutup": "meg",
+      "default": true
+    },
+    "zone": {
+      "id": "bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+      "name": "west",
+      "_links": {
+        "self": "/api/v1/zones/bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+        "collection": "/api/v1/zones/"
+      }
+    },
+    "group_mappings": [
+      {
+        "id": "e69111b3-11bb-45f0-868e-342661155c46",
+        "host_id": "185c3f3c-5ae3-4328-aa23-ff598a00acda",
+        "host_name": "westconsul",
+        "group_id": "ec11b41f-f101-489b-8298-6dd2d23d8a30",
+        "group_name": "default",
+        "priority": 100,
+        "_links": {
+          "self": "/api/v1/hosts/185c3f3c-5ae3-4328-aa23-ff598a00acda/group_mappings/ec11b41f-f101-489b-8298-6dd2d23d8a30",
+          "collection": "/api/v1/hosts/185c3f3c-5ae3-4328-aa23-ff598a00acda/group_mappings/"
+        }
+      }
+    ],
+    "created_at": "2019-12-17T15:53:38.438411+00:00",
+    "updated_at": "2019-12-17T15:53:38.438582+00:00",
+    "_links": {
+      "self": "/api/v1/hosts/185c3f3c-5ae3-4328-aa23-ff598a00acda",
+      "collection": "/api/v1/hosts/"
+    }
+  },
+  {
+    "id": "311097b2-026a-42f1-8fcc-e9528e9df856",
+    "zone_id": "bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+    "name": "westprom",
+    "vars": {
+      "consul_node": "westconsul"
+    },
+    "compiled_vars": {
+      "datacenter": "west",
+      "prom_node": "westprom",
+      "thanos": true,
+      "prom_region": "west",
+      "shutup": "meg",
+      "default": true,
+      "consul_node": "westconsul"
+    },
+    "zone": {
+      "id": "bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+      "name": "west",
+      "_links": {
+        "self": "/api/v1/zones/bbb88e1d-a373-4cbe-84bb-83e3663c11f5",
+        "collection": "/api/v1/zones/"
+      }
+    },
+    "group_mappings": [
+      {
+        "id": "9231ba4b-ba23-40e5-908f-e918de00e4e6",
+        "host_id": "311097b2-026a-42f1-8fcc-e9528e9df856",
+        "host_name": "westprom",
+        "group_id": "ad4640c2-fa54-45d1-b135-677ca1675656",
+        "group_name": "prom_nodes",
+        "priority": 100,
+        "_links": {
+          "self": "/api/v1/hosts/311097b2-026a-42f1-8fcc-e9528e9df856/group_mappings/ad4640c2-fa54-45d1-b135-677ca1675656",
+          "collection": "/api/v1/hosts/311097b2-026a-42f1-8fcc-e9528e9df856/group_mappings/"
+        }
+      },
+      {
+        "id": "3f6b10ff-f6a5-4d87-bfcb-5681abc3f2df",
+        "host_id": "311097b2-026a-42f1-8fcc-e9528e9df856",
+        "host_name": "westprom",
+        "group_id": "ec11b41f-f101-489b-8298-6dd2d23d8a30",
+        "group_name": "default",
+        "priority": 100,
+        "_links": {
+          "self": "/api/v1/hosts/311097b2-026a-42f1-8fcc-e9528e9df856/group_mappings/ec11b41f-f101-489b-8298-6dd2d23d8a30",
+          "collection": "/api/v1/hosts/311097b2-026a-42f1-8fcc-e9528e9df856/group_mappings/"
+        }
+      }
+    ],
+    "created_at": "2019-12-17T15:53:38.438411+00:00",
+    "updated_at": "2019-12-17T15:53:38.438582+00:00",
+    "_links": {
+      "self": "/api/v1/hosts/311097b2-026a-42f1-8fcc-e9528e9df856",
+      "collection": "/api/v1/hosts/"
+    }
+  }
+]

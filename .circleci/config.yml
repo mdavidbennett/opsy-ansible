@@ -1,0 +1,106 @@
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+version: 2.1
+
+workflows:
+  version: 2
+  main_workflow:
+    jobs:
+      - test_python27
+      - test_python35
+      - test_python36
+      - test_python37
+      - test_python38
+
+jobs:
+  test_python27:
+    docker:
+      - image: circleci/python:2.7
+    working_directory: &wd ~/ansible_collections/opsy/opsy_ansible
+    environment:
+      PYTHON_VERSION: "2.7"
+    steps:
+      - common_setup:
+          python_version: "2.7"
+      - run_tests
+  test_python35:
+    docker:
+      - image: circleci/python:3.5
+    working_directory: *wd
+    environment:
+      PYTHON_VERSION: "3.5"
+    steps:
+      - common_setup:
+          python_version: "3.5"
+      - run_tests
+  test_python36:
+    docker:
+      - image: circleci/python:3.6
+    working_directory: *wd
+    environment:
+      PYTHON_VERSION: "3.6"
+    steps:
+      - common_setup:
+          python_version: "3.6"
+      - run_tests
+  test_python37:
+    docker:
+      - image: circleci/python:3.7
+    working_directory: *wd
+    environment:
+      PYTHON_VERSION: "3.7"
+    steps:
+      - common_setup:
+          python_version: "3.7"
+      - run_tests
+  test_python38:
+    docker:
+      - image: circleci/python:3.8
+    working_directory: *wd
+    environment:
+      PYTHON_VERSION: "3.8"
+    steps:
+      - common_setup:
+          python_version: "3.8"
+      - run_tests
+
+commands:
+
+  common_setup:
+    description: Common steps for all jobs
+    parameters:
+      python_version:
+          type: string
+          default: ""
+    steps:
+      - checkout:
+          path: .
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-<< parameters.python_version >>-{{ checksum "test-requirements.txt" }}
+      - run:
+          name: Create virtualenv
+          command: virtualenv ~/venv
+      - run:
+          name: Activate virtualenv
+          command: echo "source ~/venv/bin/activate" >> $BASH_ENV
+      - run:
+          name: Install dependencies
+          command: pip install -r test-requirements.txt
+      - save_cache:
+          paths:
+            - ~/venv/
+          key: v1-dependencies-<< parameters.python_version >>-{{ checksum "test-requirements.txt" }}
+
+  run_tests:
+    description: Run tests
+    steps:
+      - run:
+          name: Run sanity tests
+          command: ansible-test sanity --python ${PYTHON_VERSION}
+      - run:
+          name: Run unit tests
+          command: ansible-test units --python ${PYTHON_VERSION}

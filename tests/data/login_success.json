@@ -1,0 +1,9 @@
+{
+  "user_id": "72dc9589-91d7-4093-9bc3-cc46d2b950df",
+  "user_name": "admin",
+  "full_name": "Default admin user",
+  "email": "test@example.com",
+  "ldap_user": false,
+  "token": "eyJhbGciOiJIUzUxMiIsImlhdCI6MTU3NjUxMDY4OSwiZXhwIjoxNTc2NTk3MDg5fQ.eyJpZCI6IjcyZGM5NTg5LTkxZDctNDA5My05YmMzLWNjNDZkMmI5NTBkZiJ9._UjE5mwyV662fVGNYlF3nbxjckKTl7bq_zVxL0GqBnFBA8fWw7-3j5WkVwqS2X39pJoOSajUlgz-OXNod6DurA",
+  "expires_at": "2019-12-17T15:38:09+00:00"
+}
